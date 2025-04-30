@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Psyduck Fan Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body, h1, h2, h3, h4, h5, h6{
+      font-family: "Raleway", sans-serif; 
+	  
+	  color:black;
+    }
+
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+      background-color: #fffbe6;
+    }
+
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("/assets/image.png");
+      min-height: 100%;
+    }
+
+    .w3-yellow-theme {
+      background-color: #ffeb3b;
+      color: #333;
+    }
+
+    .w3-button {
+      background-color: #ffeb3b;
+      color: black;
+    }
+
+    .falling-psyduck {
+      position: fixed;
+      top: -100px;
+      width: 60px;
+      z-index: 9999;
+      pointer-events: none;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+	#home{
+    img{
+        width: 40px;
+    }
+}
+	#title{color:black;
+	}
+	
+	p{color:black;
+	}
+	
+
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-yellow-theme w3-card">
+     <a href="#home" id="home"class="w3-bar-item w3-button w3-wide">
+        <img src="/R.gif" alt="">
+        Psyduck
+    </a>
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">Sobre</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Equipe</a>
+      <a href="#gallery" class="w3-bar-item w3-button"><i class="fa fa-image"></i> Galeria</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>Contato</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="bgimg-1 w3-display-container w3-text-white" id="home">
+  <div class="w3-display-middle" style="text-align:center;">
+    <h1 id="title"class="w3-jumbo w3-animate-top">Psyduck</h1>
+    <p class="w3-large w3-animate-bottom">Confuso, fofo e sempre com dor de cabeça!</p>
+    <a href="#about" class="w3-button w3-padding-large w3-margin-top">Saiba mais</a>
+  </div>
+</header>
+
+<!-- About -->
+<div class="w3-container" style="padding:64px 16px" id="about">
+  <h3 class="w3-center">Quem é o Psyduck?</h3>
+  <p class="w3-center w3-large">Um Pokémon que todos amam — ou tentam entender!</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-question-circle w3-jumbo w3-margin-bottom"></i>
+      <p class="w3-large">Confuso</p>
+      <p>Sempre parece estar perdido... mas guarda poderes psíquicos incríveis!</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-bolt w3-jumbo w3-margin-bottom"></i>
+      <p class="w3-large">Poderoso</p>
+      <p>Quando a dor de cabeça atinge o limite, Psyduck libera ataques mentais devastadores!</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-jumbo w3-margin-bottom"></i>
+      <p class="w3-large">Amável</p>
+      <p>Mesmo desajeitado, conquista corações por onde passa.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-star w3-jumbo w3-margin-bottom"></i>
+      <p class="w3-large">Ícone</p>
+      <p>Famoso por suas aparições no anime com Misty e nos jogos Pokémon!</p>
+    </div>
+  </div>
+</div>
+
+<!-- Script para efeito Psyduck -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const homeLink = document.querySelector('a[href="#home"]');
+    if (homeLink) {
+      homeLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        for (let i = 0; i < 20; i++) {
+          createFallingPsyduck();
+        }
+        // Scroll para o topo (home)
+        document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  });
+
+  function createFallingPsyduck() {
+    const img = document.createElement('img');
+    img.src = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png';
+    img.classList.add('falling-psyduck');
+    img.style.left = Math.random() * 100 + 'vw';
+    img.style.animationDuration = (2 + Math.random() * 3) + 's';
+    document.body.appendChild(img);
+
+    setTimeout(() => {
+      img.remove();
+    }, 5000);
+  }
+</script>
+
+</body>
+</html>
