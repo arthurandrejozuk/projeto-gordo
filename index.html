@@ -56,18 +56,64 @@
         opacity: 0;
       }
     }
+    .w3-quarter{
+      padding: 4px;
+      transition: 500ms;
+    }
+ 
+    .w3-quarter:hover{
+      background-color: #ffeb3b;  
+    }
+
 	#home{
     img{
         width: 40px;
     }
-}
-	#title{color:black;
-	}
-	
-	p{color:black;
-	}
-	
+  }
 
+	#title{
+    color:black;
+	}
+
+	p{
+      color:black;
+	}
+
+  .w3-right{
+    display: flex;
+    gap: 12px;
+  
+  }
+	
+  .header-options{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .w3-quarter {
+    padding:12px;
+  }
+
+  @media(max-width: 768px){
+    .w3-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .header-options-p{
+      display: none;
+    }
+     .fa{
+        padding: 12px;
+      }
+    #sobre{
+      display: none;
+     
+    }
+    i{
+      width: 40px;
+    }
+  }
   </style>
 </head>
 
@@ -76,15 +122,19 @@
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-yellow-theme w3-card">
-     <a href="#home" id="home"class="w3-bar-item w3-button w3-wide">
-        <img src="/R.gif" alt="">
-        Psyduck
+    <a href="#home" id="home" class="w3-bar-item w3-button w3-wide">
+      <div class="header-options">
+        <img src="./assets/R.gif" alt="">
+        <p>
+           Psyduck
+        </p>
+      </div>
     </a>
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">Sobre</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Equipe</a>
-      <a href="#gallery" class="w3-bar-item w3-button"><i class="fa fa-image"></i> Galeria</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>Contato</a>
+    <div class="w3-right">
+      <a href="#about" id="sobre" class="w3-bar-item w3-button"><div class="header-options"><p class="header-options-p" >Sobre</p></div></a>
+      <a href="#team" class="w3-bar-item w3-button"><div class="header-options"><i class="fa fa-user"></i><p class="header-options-p">Equipe</p></div></a>
+      <a href="#gallery" class="w3-bar-item w3-button"><div class="header-options"><i class="fa fa-image"></i><p class="header-options-p">Galeria</p></div></a>
+      <a href="#contact" class="w3-bar-item w3-button"><div class="header-options"><i class="fa fa-envelope"></i><p class="header-options-p">Contato</p></div></a>
     </div>
   </div>
 </div>
@@ -102,7 +152,7 @@
 <div class="w3-container" style="padding:64px 16px" id="about">
   <h3 class="w3-center">Quem é o Psyduck?</h3>
   <p class="w3-center w3-large">Um Pokémon que todos amam — ou tentam entender!</p>
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
+  <div class=" w3-center" style="margin-top:64px">
     <div class="w3-quarter">
       <i class="fa fa-question-circle w3-jumbo w3-margin-bottom"></i>
       <p class="w3-large">Confuso</p>
@@ -155,6 +205,5 @@
     }, 5000);
   }
 </script>
-
 </body>
 </html>
