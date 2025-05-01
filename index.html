@@ -6,135 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    body, h1, h2, h3, h4, h5, h6{
-      font-family: "Raleway", sans-serif; 
-	  
-	  color:black;
-    }
-
-    body, html {
-      height: 100%;
-      line-height: 1.8;
-      background-color: #fffbe6;
-    }
-
-    .bgimg-1 {
-      background-position: center;
-      background-size: cover;
-      background-image: url("./assets/image.png");
-      min-height: 100%;
-    }
-
-    .w3-yellow-theme {
-      background-color: #ffeb3b;
-      color: #333;
-    }
-
-    .w3-button {
-      background-color: #ffeb3b;
-      color: black;
-    }
-
-    .falling-psyduck {
-      position: fixed;
-      top: -100px;
-      width: 60px;
-      z-index: 9999;
-      pointer-events: none;
-      animation: fall linear infinite;
-    }
-
-    @keyframes fall {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(120vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
-    .w3-quarter{
-      padding: 4px;
-      transition: 500ms;
-    }
- 
-    .w3-quarter:hover{
-      background-color: #ffeb3b;  
-    }
-
-	#home{
-    img{
-        width: 40px;
-    }
-  }
-
-	#title{
-    color:black;
-	}
-
-	p{
-      color:black;
-	}
-
-  .w3-right{
-    display: flex;
-    gap: 12px;
-  
-  }
-	
-  .header-options{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .w3-quarter {
-    padding:12px;
-  }
-
-  @media(max-width: 768px){
-    .w3-bar {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .header-options-p{
-      display: none;
-    }
-     .fa{
-        padding: 12px;
-      }
-    #sobre{
-      display: none;
-     
-    }
-    i{
-      width: 40px;
-    }
-  }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css" >
 </head>
 
 <body>
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-yellow-theme w3-card">
+  <div class="w3-bar  w3-card">
     <a href="#home" id="home" class="w3-bar-item w3-button w3-wide">
       <div class="header-options">
         <img src="./assets/R.gif" alt="">
-        <p>
+        <p class="header-title">
            Psyduck
         </p>
       </div>
     </a>
     <div class="w3-right">
-      <a href="#about" id="sobre" class="w3-bar-item w3-button"><div class="header-options"><p class="header-options-p" >Sobre</p></div></a>
-      <a href="#team" class="w3-bar-item w3-button"><div class="header-options"><i class="fa fa-user"></i><p class="header-options-p">Equipe</p></div></a>
-      <a href="#gallery" class="w3-bar-item w3-button"><div class="header-options"><i class="fa fa-image"></i><p class="header-options-p">Galeria</p></div></a>
-      <a href="#contact" class="w3-bar-item w3-button"><div class="header-options"><i class="fa fa-envelope"></i><p class="header-options-p">Contato</p></div></a>
+      <a href="#about" id="sobre" class="w3-bar-item w3-button">
+        <div class="header-options">
+          <i class="fa fa-user"></i>
+          <p class="header-options-p">Sobre</p>
+        </div>
+      </a>
+      <a href="#team" class="w3-bar-item w3-button"><div class="header-options"><i class="fa-solid fa-droplet fa-lg"></i><p class="header-options-p">Tipo</p></div></a>
+      <a href="#gallery" class="w3-bar-item w3-button"><div class="header-options"><i class="fa fa-image fa-lg"></i><p class="header-options-p">Galeria</p></div></a>
+      <a href="#contact" class="w3-bar-item w3-button"><div class="header-options"><i class="fa fa-envelope fa-lg"></i><p class="header-options-p">Contato</p></div></a>
     </div>
   </div>
 </div>
@@ -152,58 +50,55 @@
 <div class="w3-container" style="padding:64px 16px" id="about">
   <h3 class="w3-center">Quem é o Psyduck?</h3>
   <p class="w3-center w3-large">Um Pokémon que todos amam — ou tentam entender!</p>
-  <div class=" w3-center" style="margin-top:64px">
+  <div class="w3-center" style="margin-top:64px">
     <div class="w3-quarter">
-      <i class="fa fa-question-circle w3-jumbo w3-margin-bottom"></i>
-      <p class="w3-large">Confuso</p>
+      <i  style="color: blueviolet;" class="fa fa-question-circle w3-jumbo w3-margin-bottom"></i>
+      <h6 class="w3-large">Confuso</h6>
       <p>Sempre parece estar perdido... mas guarda poderes psíquicos incríveis!</p>
     </div>
     <div class="w3-quarter">
-      <i class="fa fa-bolt w3-jumbo w3-margin-bottom"></i>
-      <p class="w3-large">Poderoso</p>
+      <i style="color: rgb(209, 209, 95);" class="fa fa-bolt w3-jumbo w3-margin-bottom"></i>
+      <h6 class="w3-large">Poderoso</h6>
       <p>Quando a dor de cabeça atinge o limite, Psyduck libera ataques mentais devastadores!</p>
     </div>
     <div class="w3-quarter">
-      <i class="fa fa-heart w3-jumbo w3-margin-bottom"></i>
-      <p class="w3-large">Amável</p>
+      <i style="color: red;" class="fa fa-heart w3-jumbo w3-margin-bottom"></i>
+      <h6 class="w3-large">Amável</h6>
       <p>Mesmo desajeitado, conquista corações por onde passa.</p>
     </div>
     <div class="w3-quarter">
-      <i class="fa fa-star w3-jumbo w3-margin-bottom"></i>
-      <p class="w3-large">Ícone</p>
+      <i style="color: yellow;" class="fa fa-star w3-jumbo w3-margin-bottom"></i>
+      <h6 class="w3-large">Ícone</h6>
       <p>Famoso por suas aparições no anime com Misty e nos jogos Pokémon!</p>
     </div>
   </div>
 </div>
 
+<!-- Psyduck  --> 
+<div class="psyduck-container">
+  <div id="team" class="equipe">
+    <h2 style="padding-top: 12px;" class="w3-center">Tipo</h2>
+    <div class="tipo-container">
+          <h4 style="color: aqua;">Água</h4>
+          <i style=" color: aqua; text-align: center; font-size: 60px; z-index: 9999;" class="fa-solid fa-droplet fa-flip-horizontal fa-lg "></i>
+      <img class="psyduck-gif" src="./assets/poke_54.gif" alt="">
+    </div>
+    <div class="w3-center">
+      <h3 style="color: rgba(255, 0, 0, 0.699);">Fraqueza</h3>
+      <div class="fraquezas-container">
+        <p class="fraquezas" style=" background-color: rgb(255, 167, 3); border-radius: 4px; padding: 4px; color: rgb(255, 217, 0);"><i class="fa-solid fa-bolt"></i>Elétrico</p>
+        <p class="fraquezas" style=" background-color: rgba(115, 255, 0, 0.466); border-radius: 4px;  padding: 4px; color: green;"> <i class="fa-solid fa-leaf"></i>Planta</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <h5 style="font-size: 20px;">Feito por Arthur</h5>
+</footer>
+
 <!-- Script para efeito Psyduck -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const homeLink = document.querySelector('a[href="#home"]');
-    if (homeLink) {
-      homeLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        for (let i = 0; i < 20; i++) {
-          createFallingPsyduck();
-        }
-        // Scroll para o topo (home)
-        document.getElementById("home").scrollIntoView({ behavior: "smooth" });
-      });
-    }
-  });
-
-  function createFallingPsyduck() {
-    const img = document.createElement('img');
-    img.src = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png';
-    img.classList.add('falling-psyduck');
-    img.style.left = Math.random() * 100 + 'vw';
-    img.style.animationDuration = (2 + Math.random() * 3) + 's';
-    document.body.appendChild(img);
-
-    setTimeout(() => {
-      img.remove();
-    }, 5000);
-  }
-</script>
+<script src="./js/main.js"></script>
 </body>
 </html>
