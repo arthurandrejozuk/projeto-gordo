@@ -3,7 +3,7 @@
     if (homeLink) {
       homeLink.addEventListener('click', function (e) {
         e.preventDefault();
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 30; i++) {
           createFallingPsyduck();
         }
         // Scroll para o topo (home)
@@ -16,8 +16,9 @@
     const img = document.createElement('img');
     img.src = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png';
     img.classList.add('falling-psyduck');
-    img.style.left = Math.random() * 100 + 'vw';
+    img.style.right = Math.random() * window.screen.width + 'vw';
     img.style.animationDuration = (2 + Math.random() * 3) + 's';
+    
     document.body.appendChild(img);
 
     setTimeout(() => {
